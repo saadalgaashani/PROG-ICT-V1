@@ -1,11 +1,8 @@
-c= int("7")
-a = c * 2
-print(a)
 
-cijfer = 7.8
-text= "je hebt:" + str(cijfer)
-print( text)
+x = int(input("hoe oud ben je?"))
 
-invoer = input("ik ben")
-print("welcom,",invoer+"!")
+if x >= 18:
+    print("je mag het kopen!!")
 
+else:
+    print("je mag het niet !!! ")
