@@ -1,8 +1,9 @@
+x = 0
 
-x = int(input("hoe oud ben je?"))
+def tel():
+    global x
+    x = x + 1
+    print ("saad", "de"+x)
 
-if x >= 18:
-    print("je mag het kopen!!")
 
-else:
-    print("je mag het niet !!! ")
+    tel()
