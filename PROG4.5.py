@@ -6,4 +6,4 @@ def kwadraten_som(grondgetallen):
             totaal = totaal + getal **2
 
     return totaal
-print(kwadraten_som([4,3,-5]))
+print(kwadraten_som([4,43,-5]))
