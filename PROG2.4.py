@@ -3,7 +3,7 @@ from selectors import SelectSelector
 from turtledemo.round_dance import stop
 
 prijs = random.randint(10,150)
-print("De prijs van het gekozen product:" ,prijs)
+print("De prijs van het gekozen product:" +str(prijs))
 betaald = input("Het betaalde bedrag:")
 
 
