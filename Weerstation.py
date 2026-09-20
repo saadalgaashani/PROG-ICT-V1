@@ -1,3 +1,5 @@
+from builtins import sum
+
 
 def  fahrenheit(temp_celcius):
     f = 32 + 1.8 * temp_celcius
@@ -23,16 +25,35 @@ def weerrapport(temp_celcius, windsnelheid, luchtvochtigheid):
         return ("Warm! Airco aan!")
 
 def weerstation():
+    geregsteerd_temp = []
     for dag in range(1,8):
-        temp_invoer= float(input(f"Wat is op dag {dag}  de temperatuur[C]:"))
-        wind_invoer= float(input(f"Wat is op dag {dag} de windsnelheid[m/s]:"))
-        vocht_invoer= float(input(f"Wat is op dag {dag} de vochtigheid[%]:"))
-    if temp_invoer != "":
-        break
-    elif wind_invoer != "":
-        pass
-    elif vocht_invoer != "":
-        pass
+        temp_invoer= input(f"Wat is op dag {dag}  de temperatuur[C]:")
+        if temp_invoer =="":
+            print("bye")
+            break
+        else:
+            temp_invoer = float(temp_invoer)
+
+        wind_invoer= input(f"Wat is op dag {dag} de windsnelheid[m/s]:")
+        if wind_invoer == "":
+            print("bye")
+            break
+        else:
+            wind_invoer = float(wind_invoer)
+
+        vocht_invoer= input(f"Wat is op dag {dag} de vochtigheid[%]:")
+        if vocht_invoer == "":
+            print("bye")
+            break
+        else:
+            vocht_invoer = float(vocht_invoer)
+
+        geregsteerd_temp.append(float(temp_invoer))
+        gimedeld = sum(geregsteerd_temp) / len(geregsteerd_temp)
+        print("Het is",str(temp_invoer)+"C","("+ str(fahrenheit(temp_invoer))+"F"+")")
+        print(weerrapport(temp_invoer,wind_invoer,vocht_invoer))
+        print("Gem.temp tot nu toe is",round(gimedeld,1))
+        print("="*39)
 
 
 
@@ -45,4 +66,5 @@ def weerstation():
 
 
 
-print(weerstation())
+
+weerstation()
