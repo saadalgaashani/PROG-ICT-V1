@@ -1,11 +1,7 @@
-c= int("7")
-a = c * 2
-print(a)
+x = 5
+y = 8
 
-cijfer = 7.8
-text= "je hebt:" + str(cijfer)
-print( text)
-
-invoer = input("ik ben")
-print("welcom,",invoer+"!")
-
+if x > y :
+    print ("x is greater then y")
+else:
+    print("else is not greater then y")
