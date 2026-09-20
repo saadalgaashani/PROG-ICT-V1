@@ -12,17 +12,17 @@ def gevoelstemperatuur(temp_celcius, windsnelheid, luchtvochtigheid):
 def weerrapport(temp_celcius, windsnelheid, luchtvochtigheid):
     voel = gevoelstemperatuur(temp_celcius, windsnelheid, luchtvochtigheid)
     if voel < 0 and windsnelheid > 10:
-        return ("Het is heel koud en het stormt! Verwarming helemaal aan!")
+        return "Het is heel koud en het stormt! Verwarming helemaal aan!"
     elif voel <0 and windsnelheid <= 10:
-        return ("Het is behoorlijk koud! Verwarming aan op de benedenverdieping!")
+        return "Het is behoorlijk koud! Verwarming aan op de benedenverdieping!"
     elif voel >= 0 and voel <10 and windsnelheid >12:
-        return("Het is best koud en het waait; verwarming aan en roosters dicht!")
+        return"Het is best koud en het waait; verwarming aan en roosters dicht!"
     elif voel >= 0 and voel < 10 and windsnelheid <= 12:
-        return("Het is een beetje koud, elektrische kachel op de benedenverdieping aan!")
+        return "Het is een beetje koud, elektrische kachel op de benedenverdieping aan!"
     elif voel >= 10 and voel < 22:
-        return ("Heerlijk weer, niet te koud of te warm.")
+        return "Heerlijk weer, niet te koud of te warm."
     else:
-        return ("Warm! Airco aan!")
+        return "Warm! Airco aan!"
 
 def weerstation():
     geregsteerd_temp = []
