@@ -65,3 +65,27 @@
 # gim = sum(dfdf) / len(dfdf)
 #
 # print(gim)
+
+# num = 1
+# while num <= 9:
+#     print(num)
+#     num += 2
+# print("Klaar")
+
+# sum = []
+
+matrix_bord = [
+[0, 1, 1, 1, 0],
+[1, 0, 0, 0, 1],
+[1, 0, 0, 0, 1],
+[1, 0, 0, 0, 1],
+[0, 1, 1, 1, 0]
+]
+
+for rij in matrix_bord:
+    for lampje in rij:
+        if lampje ==0:
+            print(" ",end="")
+        else:
+            print("0",end="")
+    print()
