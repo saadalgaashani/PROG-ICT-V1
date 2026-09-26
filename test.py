@@ -74,18 +74,85 @@
 
 # sum = []
 
-matrix_bord = [
-[0, 1, 1, 1, 0],
-[1, 0, 0, 0, 1],
-[1, 0, 0, 0, 1],
-[1, 0, 0, 0, 1],
-[0, 1, 1, 1, 0]
-]
+# matrix_bord = [
+# [0, 1, 1, 1, 0],
+# [1, 0, 0, 0, 1],
+# [1, 0, 0, 0, 1],
+# [1, 0, 0, 0, 1],
+# [0, 1, 1, 1, 0]
+# ]
+#
+# for rij in matrix_bord:
+#     for lampje in rij:
+#         if lampje ==0:
+#             print(" ",end="")
+#         else:
+#             print("0",end="")
+#     print()
 
-for rij in matrix_bord:
-    for lampje in rij:
-        if lampje ==0:
-            print(" ",end="")
-        else:
-            print("0",end="")
-    print()
+# fruitmand = {"appel":3,"banaan":5,"kers":50}
+#
+# print(fruitmand["banaan"] * fruitmand["appel"])
+#
+# if "mango" in fruitmand:
+#     print(fruitmand["mango"])
+
+# fruitmand = {"appel":3,"banaan":5}
+# fruitmand["mango"]= int(input("hoeveel mango's"))
+# print(fruitmand)
+# fruitmand["mango"]= 4
+# print(fruitmand,end="\n\n")
+#
+# for key in fruitmand:
+#     print(key,"=",fruitmand[key])
+#
+
+
+
+# telegboek = {"Saad":123456789,"Jurjan":987654321}
+#
+# telegboek["melle"] = 897654321
+# telegboek[input("schrijf de naam:")] = int(input("schrijf het nummer:"))
+# for tel in telegboek:
+#     print(tel, "=",telegboek[tel])
+
+
+#
+# fruitmand = {"appel":3, "banaan":5, "kers":50}
+#
+# print("Aantal fruitsoorten: ", len(fruitmand.keys()))
+# print("Aantal vruchten: ", sum(fruitmand.values()))
+#
+# print("Voldoende voorraad van:")
+#
+# for key, value in fruitmand.items():
+#     if value > 10:
+#         print(key, ":", value)
+
+# fruitmand = {"appel": 3, "banaan": 5}
+# peren = fruitmand.get("peer")
+#
+#     if peren:
+#         print("peren:", 0)
+#     else:
+#         print("peren:", peren)
+
+telegboek = {"Saad":123456789,"Jurjan":987654321}
+# naam = input("Wie zoekt u? ")
+# nummer = telegboek.get(naam, 'werd niet gevonden')
+zoeknummer = input("welk nummer zoekt u e? ")
+if zoeknummer not in telegboek.keys():
+    print("Dit nummer is onbekend!")
+else:
+    for naam,nummer in telegboek.items():
+        if naam == zoeknummer:
+            print("Dit naam is van",nummer)
+#
+#
+#
+# fruitmand = {"appel": 3, "banaan": 5,"kers":50}
+#
+# verwijderd = fruitmand.pop("appel")
+# del fruitmand["kers"]
+# print(fruitmand)
+# print(verwijderd)

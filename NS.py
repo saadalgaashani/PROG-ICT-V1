@@ -21,10 +21,13 @@ def ritprijs(leeftijd, weekendrit, afstandKM):
             ## hier is de korting voor de overige leeftijdsgroepen
             if weekendrit == True:
                  return basis_prijs * 0.60 # [0,48] 50(24), 55(28.799999999999997)
-            else:
-                 return basis_prijs
 
-kort = ritprijs(15,False,55)
+            elif weekendrit == False:
+                return basis_prijs
+                # else:
+            #      return basis_prijs
+
+kort = ritprijs(30,False,20)
 
 print("--- Test 1: Standaardprijs ---")
 print("Afstand -10 km (moet 0 zijn):", standaardprijs(-10))
@@ -46,3 +49,4 @@ print("Senior 65 jr, weekend, 50 km (moet 26.0 zijn):", ritprijs(65, True, 50))
 print("\n--- Test 4: Randgevallen leeftijd ---")
 print("Persoon precies 12 jr, doordeweeks, 50 km (moet 40.0 zijn):", ritprijs(12, False, 50))
 print("Persoon precies 12 jr, weekend, 50 km (moet 24.0 zijn):", ritprijs(12, True, 50))
+
